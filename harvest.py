@@ -58,7 +58,6 @@ def make_melon_types():
 
 def print_pairing_info(melon_types):
     """Prints information about each melon type's pairings."""
-    pdb.set_trace()
 
     for melon in melon_types:
         print("{} pairs well with {}".format(melon.name, melon.pairings))
@@ -66,8 +65,13 @@ def print_pairing_info(melon_types):
 
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
+    melon_types_dictionary = {}
 
-    print(melon_types)
+    for melon in melon_types:
+        melon_types_dictionary[melon.code] = melon.name
+
+    return melon_types_dictionary
+
 ############
 # Part 2   #
 ############
@@ -89,5 +93,5 @@ def get_sellability_report(melons):
     # Fill in the rest
 
 types_of_melons = make_melon_types()
-print(print_pairing_info(types_of_melons))
-make_melon_type_lookup(types_of_melons)
+print_pairing_info(types_of_melons)
+print(make_melon_type_lookup(types_of_melons))

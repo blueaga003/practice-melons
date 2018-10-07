@@ -86,7 +86,6 @@ class Melon(object):
         """Initialize instance of Melon."""
 
         self.melon_type = melon_type
-        self.code = code
         self.shape_rating = shape_rating
         self.color_rating = color_rating
         self.harvested_field = harvested_field
@@ -105,33 +104,31 @@ def make_melons(melon_types):
 
     list_of_melons = []
 
-
-
     melon_1 = Melon(melon_types[3], 8, 7, 2, "Shiela")
     list_of_melons.append(melon_1)
 
-    melon_2 = (watermellon, 3, 4, 2, "Shiela")
+    melon_2 = (melon_types[3], 3, 4, 2, "Shiela")
     list_of_melons.append(melon_2)
 
-    melon_3 = (watermellon, 9, 8, 3, "Shiela")
+    melon_3 = (melon_types[3], 9, 8, 3, "Shiela")
     list_of_melons.append(melon_3)
 
-    melon_4 = (casaba, 10, 6, 35, "Shiela")
+    melon_4 = (melon_types[1], 10, 6, 35, "Shiela")
     list_of_melons.append(melon_4)
 
-    melon_5 = (crenshaw, 8, 9, 35, "Michael")
+    melon_5 = (melon_types[2], 8, 9, 35, "Michael")
     list_of_melons.append(melon_5)
 
-    melon_6 = (crenshaw, 8, 2, 35, "Michael")
+    melon_6 = (melon_types[2], 8, 2, 35, "Michael")
     list_of_melons.append(melon_6)
 
-    melon_7 = (crenshaw, "cren", 2, 3, 4, "Michael")
+    melon_7 = (melon_types[2], 2, 3, 4, "Michael")
     list_of_melons.append(melon_7)
 
-    melon_8 = (muskmellon, "musk", 6, 7, 4, "Michael")
+    melon_8 = (melon_types[0], 6, 7, 4, "Michael")
     list_of_melons.append(melon_8)
 
-    melon_9 = (watermellon, "yw", 7, 10, 3, "Shiela")
+    melon_9 = (melon_types[3], 7, 10, 3, "Shiela")
     list_of_melons.append(melon_9)
 
     return list_of_melons
@@ -144,4 +141,4 @@ def get_sellability_report(melons):
 types_of_melons = make_melon_types()
 print_pairing_info(types_of_melons)
 make_melon_type_lookup(types_of_melons)
-print(make_melons(types_of_melons))
+(make_melons(types_of_melons))

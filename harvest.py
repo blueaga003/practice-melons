@@ -97,8 +97,12 @@ class Melon(object):
                 (self.color_rating > 5) and
                 (self.harvested_field != 3))
 
+
 def make_melons(melon_types):
     """Returns a list of Melon objects."""
+
+    for melon in melon_types:
+        print(melon)
 
 
 def get_sellability_report(melons):
@@ -108,4 +112,5 @@ def get_sellability_report(melons):
 
 types_of_melons = make_melon_types()
 print_pairing_info(types_of_melons)
-print(make_melon_type_lookup(types_of_melons))
+make_melon_type_lookup(types_of_melons)
+make_melons(types_of_melons)
